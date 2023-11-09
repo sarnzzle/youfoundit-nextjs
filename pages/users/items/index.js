@@ -1,23 +1,24 @@
 import Head from "next/head";
-import Link from "next/link";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
 import FeedbackForm from "@components/FeedbackForm";
 import JokeBlock from "@components/JokeBlock";
 
-export default function Home() {
+export default function Items() {
+  
   return (
     <div className="container">
       <Head>
-        <title>Next.js Toolbox</title>
+        <title>Items</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <Header title="Next.js Toolbox" />
-        <Link key="users" href="users">
-          <p>users</p>
-        </Link>
+        <Header title="Items" />
+        <hr />
+        <p className="description">
+          All items.
+        </p>
         <Link href={{
           pathname: '/users/matt',
           query: { slug: 'matt' }
